@@ -1582,12 +1582,8 @@
 
   // src/utils/smooth-scroll.ts
   var smoothScroll = () => {
-    const scroll = new loconative_scroll_esm_default({
-      smooth: true,
-      speed: 3e3,
-      // Increase the speed to 1000ms (1 second)
-      easing: "easeInOutQuad"
-      // Use the 'easeInOutQuad' easing function
+    new loconative_scroll_esm_default({
+      smooth: true
     });
   };
 
@@ -1978,9 +1974,9 @@
     normalize,
     denormalize
   };
-  var Vector2 = class {
+  var Vector2 = class _Vector2 {
     constructor(x = 0, y = 0) {
-      Vector2.prototype.isVector2 = true;
+      _Vector2.prototype.isVector2 = true;
       this.x = x;
       this.y = y;
     }
@@ -2242,9 +2238,9 @@
       yield this.y;
     }
   };
-  var Matrix3 = class {
+  var Matrix3 = class _Matrix3 {
     constructor(n11, n12, n13, n21, n22, n23, n31, n32, n33) {
-      Matrix3.prototype.isMatrix3 = true;
+      _Matrix3.prototype.isMatrix3 = true;
       this.elements = [
         1,
         0,
@@ -2784,8 +2780,8 @@
     }
   }
   var _textureId = 0;
-  var Texture = class extends EventDispatcher {
-    constructor(image = Texture.DEFAULT_IMAGE, mapping = Texture.DEFAULT_MAPPING, wrapS = ClampToEdgeWrapping, wrapT = ClampToEdgeWrapping, magFilter = LinearFilter, minFilter = LinearMipmapLinearFilter, format = RGBAFormat, type = UnsignedByteType, anisotropy = Texture.DEFAULT_ANISOTROPY, colorSpace = NoColorSpace) {
+  var Texture = class _Texture extends EventDispatcher {
+    constructor(image = _Texture.DEFAULT_IMAGE, mapping = _Texture.DEFAULT_MAPPING, wrapS = ClampToEdgeWrapping, wrapT = ClampToEdgeWrapping, magFilter = LinearFilter, minFilter = LinearMipmapLinearFilter, format = RGBAFormat, type = UnsignedByteType, anisotropy = _Texture.DEFAULT_ANISOTROPY, colorSpace = NoColorSpace) {
       super();
       this.isTexture = true;
       Object.defineProperty(this, "id", { value: _textureId++ });
@@ -2970,9 +2966,9 @@
   Texture.DEFAULT_IMAGE = null;
   Texture.DEFAULT_MAPPING = UVMapping;
   Texture.DEFAULT_ANISOTROPY = 1;
-  var Vector4 = class {
+  var Vector4 = class _Vector4 {
     constructor(x = 0, y = 0, z = 0, w = 1) {
-      Vector4.prototype.isVector4 = true;
+      _Vector4.prototype.isVector4 = true;
       this.x = x;
       this.y = y;
       this.z = z;
@@ -3847,9 +3843,9 @@
       yield this._w;
     }
   };
-  var Vector3 = class {
+  var Vector3 = class _Vector3 {
     constructor(x = 0, y = 0, z = 0) {
-      Vector3.prototype.isVector3 = true;
+      _Vector3.prototype.isVector3 = true;
       this.x = x;
       this.y = y;
       this.z = z;
@@ -4934,9 +4930,9 @@
       return new this.constructor().copy(this);
     }
   };
-  var Matrix4 = class {
+  var Matrix4 = class _Matrix4 {
     constructor(n11, n12, n13, n14, n21, n22, n23, n24, n31, n32, n33, n34, n41, n42, n43, n44) {
-      Matrix4.prototype.isMatrix4 = true;
+      _Matrix4.prototype.isMatrix4 = true;
       this.elements = [
         1,
         0,
@@ -5001,7 +4997,7 @@
       return this;
     }
     clone() {
-      return new Matrix4().fromArray(this.elements);
+      return new _Matrix4().fromArray(this.elements);
     }
     copy(m) {
       const te = this.elements;
@@ -5713,8 +5709,8 @@
   var _z = /* @__PURE__ */ new Vector3();
   var _matrix = /* @__PURE__ */ new Matrix4();
   var _quaternion$3 = /* @__PURE__ */ new Quaternion();
-  var Euler = class {
-    constructor(x = 0, y = 0, z = 0, order = Euler.DEFAULT_ORDER) {
+  var Euler = class _Euler {
+    constructor(x = 0, y = 0, z = 0, order = _Euler.DEFAULT_ORDER) {
       this.isEuler = true;
       this._x = x;
       this._y = y;
@@ -5928,7 +5924,7 @@
   var _zAxis = /* @__PURE__ */ new Vector3(0, 0, 1);
   var _addedEvent = { type: "added" };
   var _removedEvent = { type: "removed" };
-  var Object3D = class extends EventDispatcher {
+  var Object3D = class _Object3D extends EventDispatcher {
     constructor() {
       super();
       this.isObject3D = true;
@@ -5938,7 +5934,7 @@
       this.type = "Object3D";
       this.parent = null;
       this.children = [];
-      this.up = Object3D.DEFAULT_UP.clone();
+      this.up = _Object3D.DEFAULT_UP.clone();
       const position = new Vector3();
       const rotation = new Euler();
       const quaternion = new Quaternion();
@@ -5981,9 +5977,9 @@
       });
       this.matrix = new Matrix4();
       this.matrixWorld = new Matrix4();
-      this.matrixAutoUpdate = Object3D.DEFAULT_MATRIX_AUTO_UPDATE;
+      this.matrixAutoUpdate = _Object3D.DEFAULT_MATRIX_AUTO_UPDATE;
       this.matrixWorldNeedsUpdate = false;
-      this.matrixWorldAutoUpdate = Object3D.DEFAULT_MATRIX_WORLD_AUTO_UPDATE;
+      this.matrixWorldAutoUpdate = _Object3D.DEFAULT_MATRIX_WORLD_AUTO_UPDATE;
       this.layers = new Layers();
       this.visible = true;
       this.castShadow = false;
@@ -6458,7 +6454,7 @@
   var _vbp = /* @__PURE__ */ new Vector3();
   var _vcp = /* @__PURE__ */ new Vector3();
   var warnedGetUV = false;
-  var Triangle = class {
+  var Triangle = class _Triangle {
     constructor(a2 = new Vector3(), b2 = new Vector3(), c3 = new Vector3()) {
       this.a = a2;
       this.b = b2;
@@ -6554,29 +6550,29 @@
       return target.addVectors(this.a, this.b).add(this.c).multiplyScalar(1 / 3);
     }
     getNormal(target) {
-      return Triangle.getNormal(this.a, this.b, this.c, target);
+      return _Triangle.getNormal(this.a, this.b, this.c, target);
     }
     getPlane(target) {
       return target.setFromCoplanarPoints(this.a, this.b, this.c);
     }
     getBarycoord(point, target) {
-      return Triangle.getBarycoord(point, this.a, this.b, this.c, target);
+      return _Triangle.getBarycoord(point, this.a, this.b, this.c, target);
     }
     getUV(point, uv1, uv2, uv3, target) {
       if (warnedGetUV === false) {
         console.warn("THREE.Triangle.getUV() has been renamed to THREE.Triangle.getInterpolation().");
         warnedGetUV = true;
       }
-      return Triangle.getInterpolation(point, this.a, this.b, this.c, uv1, uv2, uv3, target);
+      return _Triangle.getInterpolation(point, this.a, this.b, this.c, uv1, uv2, uv3, target);
     }
     getInterpolation(point, v12, v22, v3, target) {
-      return Triangle.getInterpolation(point, this.a, this.b, this.c, v12, v22, v3, target);
+      return _Triangle.getInterpolation(point, this.a, this.b, this.c, v12, v22, v3, target);
     }
     containsPoint(point) {
-      return Triangle.containsPoint(point, this.a, this.b, this.c);
+      return _Triangle.containsPoint(point, this.a, this.b, this.c);
     }
     isFrontFacing(direction) {
-      return Triangle.isFrontFacing(this.a, this.b, this.c, direction);
+      return _Triangle.isFrontFacing(this.a, this.b, this.c, direction);
     }
     intersectsBox(box) {
       return box.intersectsTriangle(this);
@@ -7794,7 +7790,7 @@
   var _box$1 = /* @__PURE__ */ new Box3();
   var _boxMorphTargets = /* @__PURE__ */ new Box3();
   var _vector$7 = /* @__PURE__ */ new Vector3();
-  var BufferGeometry = class extends EventDispatcher {
+  var BufferGeometry = class _BufferGeometry extends EventDispatcher {
     constructor() {
       super();
       this.isBufferGeometry = true;
@@ -8196,7 +8192,7 @@
         console.warn("THREE.BufferGeometry.toNonIndexed(): BufferGeometry is already non-indexed.");
         return this;
       }
-      const geometry2 = new BufferGeometry();
+      const geometry2 = new _BufferGeometry();
       const indices = this.index.array;
       const attributes = this.attributes;
       for (const name in attributes) {
@@ -8587,7 +8583,7 @@
     }
     return intersection;
   }
-  var BoxGeometry = class extends BufferGeometry {
+  var BoxGeometry = class _BoxGeometry extends BufferGeometry {
     constructor(width = 1, height = 1, depth = 1, widthSegments = 1, heightSegments = 1, depthSegments = 1) {
       super();
       this.type = "BoxGeometry";
@@ -8669,7 +8665,7 @@
       return this;
     }
     static fromJSON(data) {
-      return new BoxGeometry(data.width, data.height, data.depth, data.widthSegments, data.heightSegments, data.depthSegments);
+      return new _BoxGeometry(data.width, data.height, data.depth, data.widthSegments, data.heightSegments, data.depthSegments);
     }
   };
   function cloneUniforms(src) {
@@ -9592,7 +9588,7 @@
       update
     };
   }
-  var PlaneGeometry = class extends BufferGeometry {
+  var PlaneGeometry = class _PlaneGeometry extends BufferGeometry {
     constructor(width = 1, height = 1, widthSegments = 1, heightSegments = 1) {
       super();
       this.type = "PlaneGeometry";
@@ -9645,7 +9641,7 @@
       return this;
     }
     static fromJSON(data) {
-      return new PlaneGeometry(data.width, data.height, data.widthSegments, data.heightSegments);
+      return new _PlaneGeometry(data.width, data.height, data.widthSegments, data.heightSegments);
     }
   };
   var alphahash_fragment = "#ifdef USE_ALPHAHASH\n	if ( diffuseColor.a < getAlphaHashThreshold( vPosition ) ) discard;\n#endif";
@@ -19933,7 +19929,7 @@
       return this;
     }
   };
-  var SphereGeometry = class extends BufferGeometry {
+  var SphereGeometry = class _SphereGeometry extends BufferGeometry {
     constructor(radius = 1, widthSegments = 32, heightSegments = 16, phiStart = 0, phiLength = Math.PI * 2, thetaStart = 0, thetaLength = Math.PI) {
       super();
       this.type = "SphereGeometry";
@@ -20002,7 +19998,7 @@
       return this;
     }
     static fromJSON(data) {
-      return new SphereGeometry(data.radius, data.widthSegments, data.heightSegments, data.phiStart, data.phiLength, data.thetaStart, data.thetaLength);
+      return new _SphereGeometry(data.radius, data.widthSegments, data.heightSegments, data.phiStart, data.phiLength, data.thetaStart, data.thetaLength);
     }
   };
   function convertArray(array, type, forceClone) {
@@ -20636,20 +20632,20 @@
       }
     }
   };
-  var PropertyBinding = class {
+  var PropertyBinding = class _PropertyBinding {
     constructor(rootNode, path, parsedPath) {
       this.path = path;
-      this.parsedPath = parsedPath || PropertyBinding.parseTrackName(path);
-      this.node = PropertyBinding.findNode(rootNode, this.parsedPath.nodeName);
+      this.parsedPath = parsedPath || _PropertyBinding.parseTrackName(path);
+      this.node = _PropertyBinding.findNode(rootNode, this.parsedPath.nodeName);
       this.rootNode = rootNode;
       this.getValue = this._getValue_unbound;
       this.setValue = this._setValue_unbound;
     }
     static create(root, path, parsedPath) {
       if (!(root && root.isAnimationObjectGroup)) {
-        return new PropertyBinding(root, path, parsedPath);
+        return new _PropertyBinding(root, path, parsedPath);
       } else {
-        return new PropertyBinding.Composite(root, path, parsedPath);
+        return new _PropertyBinding.Composite(root, path, parsedPath);
       }
     }
     /**
@@ -20813,7 +20809,7 @@
       const propertyName = parsedPath.propertyName;
       let propertyIndex = parsedPath.propertyIndex;
       if (!targetObject) {
-        targetObject = PropertyBinding.findNode(this.rootNode, parsedPath.nodeName);
+        targetObject = _PropertyBinding.findNode(this.rootNode, parsedPath.nodeName);
         this.node = targetObject;
       }
       this.getValue = this._getValue_unavailable;
@@ -21030,7 +21026,7 @@
   }
 
   // node_modules/.pnpm/cannon-es@0.20.0/node_modules/cannon-es/dist/cannon-es.js
-  var Mat3 = class {
+  var Mat3 = class _Mat3 {
     /**
      * A vector of length 9, containing all matrix elements.
      */
@@ -21129,7 +21125,7 @@
      */
     mmult(matrix, target) {
       if (target === void 0) {
-        target = new Mat3();
+        target = new _Mat3();
       }
       const A = this.elements;
       const B = matrix.elements;
@@ -21152,7 +21148,7 @@
      */
     scale(vector, target) {
       if (target === void 0) {
-        target = new Mat3();
+        target = new _Mat3();
       }
       const e = this.elements;
       const t = target.elements;
@@ -21266,7 +21262,7 @@
      */
     reverse(target) {
       if (target === void 0) {
-        target = new Mat3();
+        target = new _Mat3();
       }
       const nr = 3;
       const nc = 6;
@@ -21390,7 +21386,7 @@
      */
     transpose(target) {
       if (target === void 0) {
-        target = new Mat3();
+        target = new _Mat3();
       }
       const M = this.elements;
       const T = target.elements;
@@ -21411,7 +21407,7 @@
     }
   };
   var reverse_eqns = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-  var Vec3 = class {
+  var Vec3 = class _Vec3 {
     constructor(x, y, z) {
       if (x === void 0) {
         x = 0;
@@ -21432,7 +21428,7 @@
      */
     cross(vector, target) {
       if (target === void 0) {
-        target = new Vec3();
+        target = new _Vec3();
       }
       const vx = vector.x;
       const vy = vector.y;
@@ -21469,7 +21465,7 @@
         target.y = vector.y + this.y;
         target.z = vector.z + this.z;
       } else {
-        return new Vec3(this.x + vector.x, this.y + vector.y, this.z + vector.z);
+        return new _Vec3(this.x + vector.x, this.y + vector.y, this.z + vector.z);
       }
     }
     /**
@@ -21482,7 +21478,7 @@
         target.y = this.y - vector.y;
         target.z = this.z - vector.z;
       } else {
-        return new Vec3(this.x - vector.x, this.y - vector.y, this.z - vector.z);
+        return new _Vec3(this.x - vector.x, this.y - vector.y, this.z - vector.z);
       }
     }
     /**
@@ -21521,7 +21517,7 @@
      */
     unit(target) {
       if (target === void 0) {
-        target = new Vec3();
+        target = new _Vec3();
       }
       const x = this.x;
       const y = this.y;
@@ -21584,7 +21580,7 @@
      */
     scale(scalar, target) {
       if (target === void 0) {
-        target = new Vec3();
+        target = new _Vec3();
       }
       const x = this.x;
       const y = this.y;
@@ -21600,7 +21596,7 @@
      */
     vmul(vector, target) {
       if (target === void 0) {
-        target = new Vec3();
+        target = new _Vec3();
       }
       target.x = vector.x * this.x;
       target.y = vector.y * this.y;
@@ -21613,7 +21609,7 @@
      */
     addScaledVector(scalar, vector, target) {
       if (target === void 0) {
-        target = new Vec3();
+        target = new _Vec3();
       }
       target.x = this.x + scalar * vector.x;
       target.y = this.y + scalar * vector.y;
@@ -21636,7 +21632,7 @@
      */
     negate(target) {
       if (target === void 0) {
-        target = new Vec3();
+        target = new _Vec3();
       }
       target.x = -this.x;
       target.y = -this.y;
@@ -21737,7 +21733,7 @@
      * Clone the vector
      */
     clone() {
-      return new Vec3(this.x, this.y, this.z);
+      return new _Vec3(this.x, this.y, this.z);
     }
   };
   Vec3.ZERO = new Vec3(0, 0, 0);
@@ -21747,7 +21743,7 @@
   var Vec3_tangents_n = new Vec3();
   var Vec3_tangents_randVec = new Vec3();
   var antip_neg = new Vec3();
-  var AABB = class {
+  var AABB = class _AABB {
     /**
      * The lower bound of the bounding box
      */
@@ -21834,7 +21830,7 @@
      * Clone an AABB
      */
     clone() {
-      return new AABB().copy(this);
+      return new _AABB().copy(this);
     }
     /**
      * Extend this AABB so that it covers the given AABB too.
@@ -22094,7 +22090,7 @@
       return this;
     }
   };
-  var Quaternion2 = class {
+  var Quaternion2 = class _Quaternion {
     constructor(x, y, z, w) {
       if (x === void 0) {
         x = 0;
@@ -22195,7 +22191,7 @@
      */
     mult(quat, target) {
       if (target === void 0) {
-        target = new Quaternion2();
+        target = new _Quaternion();
       }
       const ax = this.x;
       const ay = this.y;
@@ -22216,7 +22212,7 @@
      */
     inverse(target) {
       if (target === void 0) {
-        target = new Quaternion2();
+        target = new _Quaternion();
       }
       const x = this.x;
       const y = this.y;
@@ -22235,7 +22231,7 @@
      */
     conjugate(target) {
       if (target === void 0) {
-        target = new Quaternion2();
+        target = new _Quaternion();
       }
       target.x = -this.x;
       target.y = -this.y;
@@ -22410,7 +22406,7 @@
       return this;
     }
     clone() {
-      return new Quaternion2(this.x, this.y, this.z, this.w);
+      return new _Quaternion(this.x, this.y, this.z, this.w);
     }
     /**
      * Performs a spherical linear interpolation between two quat
@@ -22422,7 +22418,7 @@
      */
     slerp(toQuat, t, target) {
       if (target === void 0) {
-        target = new Quaternion2();
+        target = new _Quaternion();
       }
       const ax = this.x;
       const ay = this.y;
@@ -22465,7 +22461,7 @@
      */
     integrate(angularVelocity, dt, angularFactor, target) {
       if (target === void 0) {
-        target = new Quaternion2();
+        target = new _Quaternion();
       }
       const ax = angularVelocity.x * angularFactor.x, ay = angularVelocity.y * angularFactor.y, az = angularVelocity.z * angularFactor.z, bx = this.x, by = this.y, bz = this.z, bw = this.w;
       const half_dt = dt * 0.5;
@@ -22498,7 +22494,7 @@
     /** TRIMESH */
     TRIMESH: 256
   };
-  var Shape = class {
+  var Shape = class _Shape {
     /**
      * Identifier of the Shape.
      */
@@ -22531,7 +22527,7 @@
       if (options === void 0) {
         options = {};
       }
-      this.id = Shape.idCounter++;
+      this.id = _Shape.idCounter++;
       this.type = options.type || 0;
       this.boundingSphereRadius = 0;
       this.collisionResponse = options.collisionResponse ? options.collisionResponse : true;
@@ -22569,7 +22565,7 @@
   };
   Shape.idCounter = 0;
   Shape.types = SHAPE_TYPES;
-  var Transform = class {
+  var Transform = class _Transform {
     /**
      * position
      */
@@ -22593,13 +22589,13 @@
      * Get a global point in local transform coordinates.
      */
     pointToLocal(worldPoint, result) {
-      return Transform.pointToLocalFrame(this.position, this.quaternion, worldPoint, result);
+      return _Transform.pointToLocalFrame(this.position, this.quaternion, worldPoint, result);
     }
     /**
      * Get a local point in global transform coordinates.
      */
     pointToWorld(localPoint, result) {
-      return Transform.pointToWorldFrame(this.position, this.quaternion, localPoint, result);
+      return _Transform.pointToWorldFrame(this.position, this.quaternion, localPoint, result);
     }
     /**
      * vectorToWorldFrame
@@ -22658,7 +22654,7 @@
     }
   };
   var tmpQuat$1 = new Quaternion2();
-  var ConvexPolyhedron = class extends Shape {
+  var ConvexPolyhedron = class _ConvexPolyhedron extends Shape {
     /** vertices */
     /**
      * Array of integer arrays, indicating which vertices each face consists of
@@ -22771,7 +22767,7 @@
       const va2 = this.vertices[f[0]];
       const vb2 = this.vertices[f[1]];
       const vc2 = this.vertices[f[2]];
-      ConvexPolyhedron.computeNormal(va2, vb2, vc2, target);
+      _ConvexPolyhedron.computeNormal(va2, vb2, vc2, target);
     }
     /**
      * Get face normal given 3 vertices
@@ -22916,8 +22912,8 @@
      */
     testSepAxis(axis, hullB, posA, quatA, posB, quatB) {
       const hullA = this;
-      ConvexPolyhedron.project(hullA, axis, posA, quatA, maxminA);
-      ConvexPolyhedron.project(hullB, axis, posB, quatB, maxminB);
+      _ConvexPolyhedron.project(hullA, axis, posA, quatA, maxminA);
+      _ConvexPolyhedron.project(hullB, axis, posB, quatB, maxminB);
       const maxA = maxminA[0];
       const minA = maxminA[1];
       const maxB = maxminB[0];
@@ -23315,7 +23311,7 @@
   var project_worldVertex = new Vec3();
   var project_localAxis = new Vec3();
   var project_localOrigin = new Vec3();
-  var Box = class extends Shape {
+  var Box = class _Box extends Shape {
     /**
      * The half extents of the box.
      */
@@ -23370,7 +23366,7 @@
       if (target === void 0) {
         target = new Vec3();
       }
-      Box.calculateInertia(this.halfExtents, mass, target);
+      _Box.calculateInertia(this.halfExtents, mass, target);
       return target;
     }
     static calculateInertia(halfExtents, mass, target) {
@@ -23489,7 +23485,7 @@
     /** SLEEPING */
     SLEEPING: 2
   };
-  var Body = class extends EventTarget {
+  var Body = class _Body extends EventTarget {
     /**
      * Dispatched after two bodies collide. This event is dispatched on each
      * of the two bodies involved in the collision.
@@ -23532,7 +23528,7 @@
         options = {};
       }
       super();
-      this.id = Body.idCounter++;
+      this.id = _Body.idCounter++;
       this.index = -1;
       this.world = null;
       this.vlambda = new Vec3();
@@ -23560,12 +23556,12 @@
       this.invMass = mass > 0 ? 1 / mass : 0;
       this.material = options.material || null;
       this.linearDamping = typeof options.linearDamping === "number" ? options.linearDamping : 0.01;
-      this.type = mass <= 0 ? Body.STATIC : Body.DYNAMIC;
-      if (typeof options.type === typeof Body.STATIC) {
+      this.type = mass <= 0 ? _Body.STATIC : _Body.DYNAMIC;
+      if (typeof options.type === typeof _Body.STATIC) {
         this.type = options.type;
       }
       this.allowSleep = typeof options.allowSleep !== "undefined" ? options.allowSleep : true;
-      this.sleepState = Body.AWAKE;
+      this.sleepState = _Body.AWAKE;
       this.sleepSpeedLimit = typeof options.sleepSpeedLimit !== "undefined" ? options.sleepSpeedLimit : 0.1;
       this.sleepTimeLimit = typeof options.sleepTimeLimit !== "undefined" ? options.sleepTimeLimit : 1;
       this.timeLastSleepy = 0;
@@ -23620,17 +23616,17 @@
      */
     wakeUp() {
       const prevState = this.sleepState;
-      this.sleepState = Body.AWAKE;
+      this.sleepState = _Body.AWAKE;
       this.wakeUpAfterNarrowphase = false;
-      if (prevState === Body.SLEEPING) {
-        this.dispatchEvent(Body.wakeupEvent);
+      if (prevState === _Body.SLEEPING) {
+        this.dispatchEvent(_Body.wakeupEvent);
       }
     }
     /**
      * Force body sleep
      */
     sleep() {
-      this.sleepState = Body.SLEEPING;
+      this.sleepState = _Body.SLEEPING;
       this.velocity.set(0, 0, 0);
       this.angularVelocity.set(0, 0, 0);
       this.wakeUpAfterNarrowphase = false;
@@ -23644,15 +23640,15 @@
         const sleepState = this.sleepState;
         const speedSquared = this.velocity.lengthSquared() + this.angularVelocity.lengthSquared();
         const speedLimitSquared = this.sleepSpeedLimit ** 2;
-        if (sleepState === Body.AWAKE && speedSquared < speedLimitSquared) {
-          this.sleepState = Body.SLEEPY;
+        if (sleepState === _Body.AWAKE && speedSquared < speedLimitSquared) {
+          this.sleepState = _Body.SLEEPY;
           this.timeLastSleepy = time;
-          this.dispatchEvent(Body.sleepyEvent);
-        } else if (sleepState === Body.SLEEPY && speedSquared > speedLimitSquared) {
+          this.dispatchEvent(_Body.sleepyEvent);
+        } else if (sleepState === _Body.SLEEPY && speedSquared > speedLimitSquared) {
           this.wakeUp();
-        } else if (sleepState === Body.SLEEPY && time - this.timeLastSleepy > this.sleepTimeLimit) {
+        } else if (sleepState === _Body.SLEEPY && time - this.timeLastSleepy > this.sleepTimeLimit) {
           this.sleep();
-          this.dispatchEvent(Body.sleepEvent);
+          this.dispatchEvent(_Body.sleepEvent);
         }
       }
     }
@@ -23660,7 +23656,7 @@
      * If the body is sleeping, it should be immovable / have infinite mass during solve. We solve it by having a separate "solve mass".
      */
     updateSolveMassProperties() {
-      if (this.sleepState === Body.SLEEPING || this.type === Body.KINEMATIC) {
+      if (this.sleepState === _Body.SLEEPING || this.type === _Body.KINEMATIC) {
         this.invMassSolve = 0;
         this.invInertiaSolve.setZero();
         this.invInertiaWorldSolve.setZero();
@@ -23826,10 +23822,10 @@
       if (relativePoint === void 0) {
         relativePoint = new Vec3();
       }
-      if (this.type !== Body.DYNAMIC) {
+      if (this.type !== _Body.DYNAMIC) {
         return;
       }
-      if (this.sleepState === Body.SLEEPING) {
+      if (this.sleepState === _Body.SLEEPING) {
         this.wakeUp();
       }
       const rotForce = Body_applyForce_rotForce;
@@ -23846,7 +23842,7 @@
       if (localPoint === void 0) {
         localPoint = new Vec3();
       }
-      if (this.type !== Body.DYNAMIC) {
+      if (this.type !== _Body.DYNAMIC) {
         return;
       }
       const worldForce = Body_applyLocalForce_worldForce;
@@ -23860,10 +23856,10 @@
      * @param torque The amount of torque to add.
      */
     applyTorque(torque2) {
-      if (this.type !== Body.DYNAMIC) {
+      if (this.type !== _Body.DYNAMIC) {
         return;
       }
-      if (this.sleepState === Body.SLEEPING) {
+      if (this.sleepState === _Body.SLEEPING) {
         this.wakeUp();
       }
       this.torque.vadd(torque2, this.torque);
@@ -23879,10 +23875,10 @@
       if (relativePoint === void 0) {
         relativePoint = new Vec3();
       }
-      if (this.type !== Body.DYNAMIC) {
+      if (this.type !== _Body.DYNAMIC) {
         return;
       }
-      if (this.sleepState === Body.SLEEPING) {
+      if (this.sleepState === _Body.SLEEPING) {
         this.wakeUp();
       }
       const r2 = relativePoint;
@@ -23904,7 +23900,7 @@
       if (localPoint === void 0) {
         localPoint = new Vec3();
       }
-      if (this.type !== Body.DYNAMIC) {
+      if (this.type !== _Body.DYNAMIC) {
         return;
       }
       const worldImpulse = Body_applyLocalImpulse_worldImpulse;
@@ -23949,7 +23945,7 @@
     integrate(dt, quatNormalize, quatNormalizeFast) {
       this.previousPosition.copy(this.position);
       this.previousQuaternion.copy(this.quaternion);
-      if (!(this.type === Body.DYNAMIC || this.type === Body.KINEMATIC) || this.sleepState === Body.SLEEPING) {
+      if (!(this.type === _Body.DYNAMIC || this.type === _Body.KINEMATIC) || this.sleepState === _Body.SLEEPING) {
         return;
       }
       const velo = this.velocity;
@@ -24304,7 +24300,7 @@
   _Shape$types$CONVEXPO = Shape.types.CONVEXPOLYHEDRON;
   _Shape$types$HEIGHTFI = Shape.types.HEIGHTFIELD;
   _Shape$types$TRIMESH = Shape.types.TRIMESH;
-  var Ray2 = class {
+  var Ray2 = class _Ray {
     /**
      * from
      */
@@ -24392,7 +24388,7 @@
       this.skipBackfaces = false;
       this.collisionFilterMask = -1;
       this.collisionFilterGroup = -1;
-      this.mode = Ray2.ANY;
+      this.mode = _Ray.ANY;
       this.result = new RaycastResult();
       this.hasHit = false;
       this.callback = (result) => {
@@ -24403,7 +24399,7 @@
      * @return True if the ray hit anything, otherwise false.
      */
     intersectWorld(world, options) {
-      this.mode = options.mode || Ray2.ANY;
+      this.mode = options.mode || _Ray.ANY;
       this.result = options.result || new RaycastResult();
       this.skipBackfaces = !!options.skipBackfaces;
       this.collisionFilterMask = typeof options.collisionFilterMask !== "undefined" ? options.collisionFilterMask : -1;
@@ -24670,7 +24666,7 @@
           x.vadd(b, b);
           x.vadd(c2, c2);
           const distance = intersectPoint.distanceTo(from);
-          if (!(Ray2.pointInTriangle(intersectPoint, a, b, c2) || Ray2.pointInTriangle(intersectPoint, b, a, c2)) || distance > fromToDistance) {
+          if (!(_Ray.pointInTriangle(intersectPoint, a, b, c2) || _Ray.pointInTriangle(intersectPoint, b, a, c2)) || distance > fromToDistance) {
             continue;
           }
           this.reportIntersection(normal, intersectPoint, reportedShape, body, fi);
@@ -24726,7 +24722,7 @@
         mesh.getVertex(indices[trianglesIndex * 3 + 1], b);
         mesh.getVertex(indices[trianglesIndex * 3 + 2], c2);
         const squaredDistance = intersectPoint.distanceSquared(localFrom);
-        if (!(Ray2.pointInTriangle(intersectPoint, b, a, c2) || Ray2.pointInTriangle(intersectPoint, a, b, c2)) || squaredDistance > fromToDistanceSquared) {
+        if (!(_Ray.pointInTriangle(intersectPoint, b, a, c2) || _Ray.pointInTriangle(intersectPoint, a, b, c2)) || squaredDistance > fromToDistanceSquared) {
           continue;
         }
         Transform.vectorToWorldFrame(quat, normal, worldNormal);
@@ -24748,20 +24744,20 @@
       }
       result.hitFaceIndex = typeof hitFaceIndex !== "undefined" ? hitFaceIndex : -1;
       switch (this.mode) {
-        case Ray2.ALL:
+        case _Ray.ALL:
           this.hasHit = true;
           result.set(from, to, normal, hitPointWorld, shape, body, distance);
           result.hasHit = true;
           this.callback(result);
           break;
-        case Ray2.CLOSEST:
+        case _Ray.CLOSEST:
           if (distance < result.distance || !result.hasHit) {
             this.hasHit = true;
             result.hasHit = true;
             result.set(from, to, normal, hitPointWorld, shape, body, distance);
           }
           break;
-        case Ray2.ANY:
+        case _Ray.ANY:
           this.hasHit = true;
           result.hasHit = true;
           result.set(from, to, normal, hitPointWorld, shape, body, distance);
@@ -24852,7 +24848,7 @@
       return options;
     }
   };
-  var Constraint = class {
+  var Constraint = class _Constraint {
     /**
      * Equations to be solved in this constraint.
      */
@@ -24876,7 +24872,7 @@
       this.equations = [];
       this.bodyA = bodyA;
       this.bodyB = bodyB;
-      this.id = Constraint.idCounter++;
+      this.id = _Constraint.idCounter++;
       this.collideConnected = options.collideConnected;
       if (options.wakeUpBodies) {
         if (bodyA) {
@@ -24937,7 +24933,7 @@
       return spatial.dot(this.spatial) + rotational.dot(this.rotational);
     }
   };
-  var Equation = class {
+  var Equation = class _Equation {
     /**
      * Minimum (read: negative max) force to be applied by the constraint.
      */
@@ -24963,7 +24959,7 @@
       if (maxForce === void 0) {
         maxForce = 1e6;
       }
-      this.id = Equation.idCounter++;
+      this.id = _Equation.idCounter++;
       this.minForce = minForce;
       this.maxForce = maxForce;
       this.bi = bi;
@@ -25244,7 +25240,7 @@
   };
   var FrictionEquation_computeB_temp1 = new Vec3();
   var FrictionEquation_computeB_temp2 = new Vec3();
-  var ContactMaterial = class {
+  var ContactMaterial = class _ContactMaterial {
     /**
      * Identifier of this material.
      */
@@ -25284,7 +25280,7 @@
         frictionEquationStiffness: 1e7,
         frictionEquationRelaxation: 3
       });
-      this.id = ContactMaterial.idCounter++;
+      this.id = _ContactMaterial.idCounter++;
       this.materials = [m1, m2];
       this.friction = options.friction;
       this.restitution = options.restitution;
@@ -25295,7 +25291,7 @@
     }
   };
   ContactMaterial.idCounter = 0;
-  var Material2 = class {
+  var Material2 = class _Material {
     /**
      * Material name.
      * If options is a string, name will be set to that string.
@@ -25320,7 +25316,7 @@
         options = {};
       }
       this.name = name;
-      this.id = Material2.idCounter++;
+      this.id = _Material.idCounter++;
       this.friction = typeof options.friction !== "undefined" ? options.friction : -1;
       this.restitution = typeof options.restitution !== "undefined" ? options.restitution : -1;
     }

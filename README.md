@@ -1,251 +1,256 @@
-# Finsweet Developer Starter
+<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+<a name="readme-top"></a>
+<!--
+*** Thanks for checking out the Best-README-Template. If you have a suggestion
+*** that would make this better, please fork the repo and create a pull request
+*** or simply open an issue with the tag "enhancement".
+*** Don't forget to give the project a star!
+*** Thanks again! Now go create something AMAZING! :D
+-->
+
+
+
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
+
+
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+  </a>
+
+  <h3 align="center">Lucas Work Portfolio</h3>
+
+  <p align="center">
+    Building my Portfolio with Webflow and some technologies!
+    <br />
+    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/othneildrew/Best-README-Template">Acess Site</a>
+    ·
+    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    
+  </p>
+</div>
+
 
-A starter template for both Client & Power projects.
 
-Before starting to work with this template, please take some time to read through the documentation.
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
-## Reference
 
-- [Included tools](#included-tools)
-- [Requirements](#requirements)
-- [Getting started](#getting-started)
-  - [Installing](#installing)
-  - [Building](#building)
-    - [Serving files on development mode](#serving-files-on-development-mode)
-    - [Building multiple files](#building-multiple-files)
-    - [Setting up a path alias](#setting-up-a-path-alias)
-- [Contributing guide](#contributing-guide)
-- [Pre-defined scripts](#pre-defined-scripts)
-- [CI/CD](#cicd)
-  - [Continuous Integration](#continuous-integration)
-  - [Continuous Deployment](#continuous-deployment)
-  - [How to automatically deploy updates to npm](#how-to-automatically-deploy-updates-to-npm)
 
-## Included tools
+<!-- ABOUT THE PROJECT -->
+## Wait a minute, Webflow is a no-code tool, why you create a Github repository? 
 
-This template contains some preconfigured development tools:
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-- [Typescript](https://www.typescriptlang.org/): A superset of Javascript that adds an additional layer of Typings, bringing more security and efficiency to the written code.
-- [Prettier](https://prettier.io/): Code formatting that assures consistency across all Finsweet's projects.
-- [ESLint](https://eslint.org/): Code linting that enforces industries' best practices. It uses [our own custom configuration](https://github.com/finsweet/eslint-config) to maintain consistency across all Finsweet's projects.
-- [Playwright](https://playwright.dev/): Fast and reliable end-to-end testing.
-- [esbuild](https://esbuild.github.io/): Javascript bundler that compiles, bundles and minifies the original Typescript files.
-- [Changesets](https://github.com/changesets/changesets): A way to manage your versioning and changelogs.
-- [Finsweet's TypeScript Utils](https://github.com/finsweet/ts-utils): Some utilities to help you in your Webflow development.
+Follow me on my journey to build my Portfolio using **Webflow** has the main core.
 
-## Requirements
 
-This template requires the use of [pnpm](https://pnpm.js.org/en/). You can [install pnpm](https://pnpm.io/installation) with:
+### Built With
 
-```bash
-npm i -g pnpm
-```
+This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-To enable automatic deployments to npm, please read the [Continuous Deployment](#continuous-deployment) section.
+* [![Next][Next.js]][Next-url]
+* [![React][React.js]][React-url]
+* [![Vue][Vue.js]][Vue-url]
+* [![Angular][Angular.io]][Angular-url]
+* [![Svelte][Svelte.dev]][Svelte-url]
+* [![Laravel][Laravel.com]][Laravel-url]
+* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+* [![JQuery][JQuery.com]][JQuery-url]
 
-## Getting started
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-The quickest way to start developing a new project is by [creating a new repository from this template](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template#creating-a-repository-from-a-template).
 
-Once the new repository has been created, update the `package.json` file with the correct information, specially the name of the package which has to be unique.
 
-### Installing
+<!-- GETTING STARTED -->
+## Getting Started
 
-After creating the new repository, open it in your terminal and install the packages by running:
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
 
-```bash
-pnpm install
-```
+### Prerequisites
 
-If this is the first time using Playwright and you want to use it in this project, you'll also have to install the browsers by running:
+This is an example of how to list things you need to use the software and how to install them.
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
 
-```bash
-pnpm playwright install
-```
+### Installation
 
-You can read more about the use of Playwright in the [Testing](#testing) section.
+_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
-It is also recommended that you install the following extensions in your VSCode editor:
+1. Get a free API Key at [https://example.com](https://example.com)
+2. Clone the repo
+   ```sh
+   git clone https://github.com/your_username_/Project-Name.git
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. Enter your API in `config.js`
+   ```js
+   const API_KEY = 'ENTER YOUR API';
+   ```
 
-- [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Building
 
-To build the files, you have two defined scripts:
 
-- `pnpm dev`: Builds and creates a local server that serves all files (check [Serving files on development mode](#serving-files-on-development-mode) for more info).
-- `pnpm build`: Builds to the production directory (`dist`).
+<!-- USAGE EXAMPLES -->
+## Usage
 
-### Serving files on development mode
+Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-When you run `pnpm dev`, two things happen:
+_For more examples, please refer to the [Documentation](https://example.com)_
 
-- esbuild is set to `watch` mode. Every time that you save your files, the project will be rebuilt.
-- A local server is created under `http://localhost:3000` that serves all your project files. You can import them in your Webflow projects like:
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-```html
-<script defer src="http://localhost:3000/{FILE_PATH}.js"></script>
-```
 
-- Live Reloading is enabled by default, meaning that every time you save a change in your files, the website you're working on will reload automatically. You can disable it in `/bin/build.js`.
 
-### Building multiple files
+<!-- ROADMAP -->
+## Roadmap
 
-If you need to build multiple files into different outputs, you can do it by updating the build settings.
+- [x] Add Changelog
+- [x] Add back to top links
+- [ ] Add Additional Templates w/ Examples
+- [ ] Add "components" document to easily copy & paste sections of the readme
+- [ ] Multi-language Support
+    - [ ] Chinese
+    - [ ] Spanish
 
-In `bin/build.js`, update the `ENTRY_POINTS` array with any files you'd like to build:
+See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
 
-```javascript
-const ENTRY_POINTS = [
-  'src/home/index.ts',
-  'src/contact/whatever.ts',
-  'src/hooyah.ts',
-  'src/home/other.ts',
-];
-```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This will tell `esbuild` to build all those files and output them in the `dist` folder for production and in `http://localhost:3000` for development.
 
-### Building CSS files
 
-CSS files are also supported by the bundler. When including a CSS file as an entry point, the compiler will generate a minified version in your output folder.
+<!-- CONTRIBUTING -->
+## Contributing
 
-You can define a CSS entry point by either:
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-- Manually defining it in the `bin/build.js` config. [See previous section](#building-multiple-files) for reference.
-- Or importing the file inside any of your JavaScript / TypeScript files:
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
 
-```typescript
-// src/index.ts
-import './index.css';
-```
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-CSS outputs are also available in `localhost` during [development mode](#serving-files-on-development-mode).
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Setting up a path alias
 
-Path aliases are very helpful to avoid code like:
 
-```typescript
-import example from '../../../../utils/example';
-```
+<!-- LICENSE -->
+## License
 
-Instead, we can create path aliases that map to a specific folder, so the code becomes cleaner like:
+Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-```typescript
-import example from '$utils/example';
-```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-You can set up path aliases using the `paths` setting in `tsconfig.json`. This template has an already predefined path as an example:
 
-```json
-{
-  "paths": {
-    "$utils/*": ["src/utils/*"]
-  }
-}
-```
 
-To avoid any surprises, take some time to familiarize yourself with the [tsconfig](/tsconfig.json) enabled flags.
+<!-- CONTACT -->
+## Contact
 
-## Testing
+Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
 
-As previously mentioned, this library has [Playwright](https://playwright.dev/) included as an automated testing tool.
+Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
 
-All tests are located under the `/tests` folder. This template includes a test spec example that will help you catch up with Playwright.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-After [installing the dependencies](#installing), you can try it out by running `pnpm test`.
-Make sure you replace it with your own tests! Writing proper tests will help improve the maintainability and scalability of your project in the long term.
 
-By default, Playwright will also run `pnpm dev` in the background while the tests are running, so [your files served](#serving-files-on-development-mode) under `localhost:3000` will run as usual.
-You can disable this behavior in the `playwright.config.ts` file.
 
-If you project doesn't require any testing, you should disable the Tests job in the [CI workflow](#continuous-integration) by commenting it out in the `.github/workflows/ci.yml` file.
-This will prevent the tests from running when you open a Pull Request.
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
 
-## Contributing guide
+Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
-In general, your development workflow should look like this:
+* [Choose an Open Source License](https://choosealicense.com)
+* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
+* [Malven's Grid Cheatsheet](https://grid.malven.co/)
+* [Img Shields](https://shields.io)
+* [GitHub Pages](https://pages.github.com)
+* [Font Awesome](https://fontawesome.com)
+* [React Icons](https://react-icons.github.io/react-icons/search)
 
-1. Create a new branch where to develop a new feature or bug fix.
-2. Once you've finished the implementation, [create a Changeset](#continuous-deployment) (or multiple) explaining the changes that you've made in the codebase.
-3. Open a Pull Request and wait until the [CI workflows](#continuous-integration) finish. If something fails, please try to fix it before merging the PR.
-   If you don't want to wait for the CI workflows to run on GitHub to know if something fails, it will be always faster to run them in your machine before opening a PR.
-4. Merge the Pull Request. The Changesets bot will automatically open a new PR with updates to the `CHANGELOG.md`, you should also merge that one. If you have [automatic npm deployments](#how-to-automatically-deploy-updates-to-npm) enabled, Changesets will also publish this new version on npm.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-If you need to work on several features before publishing a new version on npm, it is a good practise to create a `development` branch where to merge all the PR's before pushing your code to master.
 
-## Pre-defined scripts
 
-This template contains a set of predefined scripts in the `package.json` file:
-
-- `pnpm dev`: Builds and creates a local server that serves all files (check [Serving files on development mode](#serving-files-on-development-mode) for more info).
-- `pnpm build`: Builds to the production directory (`dist`).
-- `pnpm lint`: Scans the codebase with ESLint and Prettier to see if there are any errors.
-- `pnpm lint:fix`: Fixes all auto-fixable issues in ESLint.
-- `pnpm check`: Checks for TypeScript errors in the codebase.
-- `pnpm format`: Formats all the files in the codebase using Prettier. You probably won't need this script if you have automatic [formatting on save](https://www.digitalocean.com/community/tutorials/code-formatting-with-prettier-in-visual-studio-code#automatically-format-on-save) active in your editor.
-- `pnpm test`: Will run all the tests that are located in the `/tests` folder.
-- `pnpm test:headed`: Will run all the tests that are located in the `/tests` folder visually in headed browsers.
-- `pnpm release`: This command is defined for [Changesets](https://github.com/changesets/changesets). You don't have to interact with it.
-- `pnpm run update`: Scans the dependencies of the project and provides an interactive UI to select the ones that you want to update.
-
-## CI/CD
-
-This template contains a set of helpers with proper CI/CD workflows.
-
-### Continuous Integration
-
-When you open a Pull Request, a Continuous Integration workflow will run to:
-
-- Lint & check your code. It uses the `pnpm lint` and `pnpm check` commands under the hood.
-- Run the automated tests. It uses the `pnpm test` command under the hood.
-
-If any of these jobs fail, you will get a warning in your Pull Request and should try to fix your code accordingly.
-
-**Note:** If your project doesn't contain any defined tests in the `/tests` folder, you can skip the Tests workflow job by commenting it out in the `.github/workflows/ci.yml` file. This will significantly improve the workflow running times.
-
-### Continuous Deployment
-
-[Changesets](https://github.com/changesets/changesets) allows us to generate automatic changelog updates when merging a Pull Request to the `master` branch.
-
-Before starting, make sure to [enable full compatibility with Changesets in the repository](#how-to-enable-continuous-deployment-with-changesets).
-
-To generate a new changelog, run:
-
-```bash
-pnpm changeset
-```
-
-You'll be prompted with a few questions to complete the changelog.
-
-Once the Pull Request is merged into `master`, a new Pull Request will automatically be opened by a changesets bot that bumps the package version and updates the `CHANGELOG.md` file.
-You'll have to manually merge this new PR to complete the workflow.
-
-If an `NPM_TOKEN` secret is included in the repository secrets, Changesets will automatically deploy the new package version to npm.
-See [how to automatically deploy updates to npm](#how-to-automatically-deploy-updates-to-npm) for more info.
-
-#### How to enable Continuous Deployment with Changesets
-
-Some repositories may not have the required permissions to let Changesets interact with the repository.
-
-To enable full compatibility with Changesets, go to the repository settings (`Settings > Actions > General > Workflow Permissions`) and define:
-
-- ✅ Read and write permissions.
-- ✅ Allow GitHub Actions to create and approve pull requests.
-
-Enabling this setting for your organization account (`Account Settings > Actions > General`) could help streamline the process. By doing so, any new repos created under the org will automatically inherit the setting, which can save your teammates time and effort. This can only be applied to organization accounts at the time.
-
-#### How to automatically deploy updates to npm
-
-As mentioned before, Changesets will automatically deploy the new package version to npm if an `NPM_TOKEN` secret is provided.
-
-This npm token should be:
-
-- From Finsweet's npm organization if this repository is meant for internal/product development.
-- From a client's npm organization if this repository is meant for client development. In this case, you should ask the client to [create an npm account](https://www.npmjs.com/signup) and provide you the credentials (or the npm token, if they know how to get it).
-
-Once you're logged into the npm account, you can get an access token by following [this guide](https://docs.npmjs.com/creating-and-viewing-access-tokens).
-
-The access token must be then placed in a [repository secret](https://docs.github.com/en/codespaces/managing-codespaces-for-your-organization/managing-encrypted-secrets-for-your-repository-and-organization-for-codespaces#adding-secrets-for-a-repository) named `NPM_TOKEN`.
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
+[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
+[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
+[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
+[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
+[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
+[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
+[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/othneildrew
+[product-screenshot]: images/screenshot.png
+[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+[Next-url]: https://nextjs.org/
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/
+[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
+[Vue-url]: https://vuejs.org/
+[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
+[Angular-url]: https://angular.io/
+[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
+[Svelte-url]: https://svelte.dev/
+[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
+[Laravel-url]: https://laravel.com
+[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[Bootstrap-url]: https://getbootstrap.com
+[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
+[JQuery-url]: https://jquery.com
